@@ -1,0 +1,41 @@
+@import 'mixin';
+
+body {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  // Стили для заголовка
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  // Стили для формы
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  // Стили для полей ввода и меток
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type="file"],
+  input[type="text"],
+  button[type="submit"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 300px;
+  }
+  
+  button[type="submit"] {
+    background-image: linear-gradient(45deg, #ffffff 0%, #616161 50%, #f4ffc1 100%);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }

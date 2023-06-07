@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title Верифікація
+  body
+    h1 Верифікація по фото, Імені та Даті народження
+    form#verificationForm(enctype="multipart/form-data")
+      label(for='photo') Фото:
+      input(type='file', id='photo', name='photo')
+      label(for='name') Ім'я:
+      input(type='text', id='name', name='name')
+      label(for='dob') Дата народження:
+      input(type='text', id='dob', name='dob')
+      button(type='submit') Перевірити
+    script.
+      function verifyPhotoNameAndDOB(photo, name, dob) {
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = document.getElementById('verificationForm');
+        const formData = new FormData(form);
+
+        const photo = formData.get('photo');
+        const name = formData.get('name');
+        const dob = formData.get('dob');
+
+        const verificationResult = verifyPhotoNameAndDOB(photo, name, dob);
+
+        if (verificationResult) {
+          alert('Верифікація пройшла успішно!');
+        } else {
+          alert('Верифікація не вдалась!. Перевірте та доповніть данні.');
+        }
+      }
+
+      const form = document.getElementById('verificationForm');
+      form.addEventListener('submit', handleSubmit);
