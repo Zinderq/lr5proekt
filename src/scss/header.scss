@@ -1,0 +1,62 @@
+@import 'mixin';
+header{
+    border: $border-size $black $border-solid;
+    height: fit-content;
+    display: $display;
+    flex-direction: column;
+    background-color: $lgrey;
+    nav{
+        width: 100%;
+        gap:$gap;
+        text-align: center;
+        margin-top: 1px;
+        margin-left: 520px;
+    }
+    a{        
+            font-family: 'Noto sans';
+            @include font-size($p-font-size);
+            @include a($white,$orange);
+           text-decoration: none;
+           margin-left: 10%;
+    }
+    
+}
+.headline{
+    width: 100%;
+    background-color: $grey;
+    h3
+    {
+       padding: 30px;
+        font-family: 'Arial';
+       @include font-size($h3-font-size + 15px);
+       color: $white;
+    }
+}
+.head_card{
+    height:90%;
+    width: 100%;
+    margin: $margin2p;
+    display: $display;
+    
+}
+.head_card_img{
+    border: $border-size $black $border-solid;
+    height: 100%;
+    background-size: contain;
+}
+.card_info{
+    display: $display;
+    width: 100%;
+    text-align: left;
+    flex-direction: column;
+    h3
+    {
+       font-family: 'Arial';
+       @include font-size($h3-font-size + 6px);
+       color: black;
+    }
+    p{
+        color: $black;
+
+    }
+}
